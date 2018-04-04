@@ -2,9 +2,14 @@ package helper;
 
 import org.junit.jupiter.api.Test;
 
-class StringHelperTest {
+public class StringHelperTest {
 
     @Test
-    void truncateAInFirst2Positions() {
+    public void truncateAInFirst2Positions() {
+        }
+
+    @Test
+    public void areFirstAndLastTwoCharactersTheSame(){
+
     }
 }
