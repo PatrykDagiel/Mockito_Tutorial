@@ -2,9 +2,7 @@ package helper;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class StringHelperTest {
 
@@ -28,5 +26,6 @@ public class StringHelperTest {
     @Test
     public void testAreFirstAndLastTwoCharactersTheSame_BasicPositiveScenario(){
         assertEquals(true,helper.areFirstAndLastTwoCharactersTheSame("AB"));
+        assertTrue(helper.areFirstAndLastTwoCharactersTheSame("AB"));
     }
 }
