@@ -3,20 +3,30 @@ package helper;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.fail;
 
 public class StringHelperTest {
 
+    StringHelper helper = new StringHelper();
+
     @Test
-    public void truncateAInFirst2Positions() {
-        StringHelper helper = new StringHelper();
+    public void testTruncateAInFirst2Positions_2positions() {
         assertEquals("CD", helper.truncateAInFirst2Positions("AACD"));
+    }
+
+    @Test
+    public void testTruncateAInFirst2Positions_1position() {
         assertEquals("CD", helper.truncateAInFirst2Positions("ACD"));
     }
 
+    @Test
+    public void testAreFirstAndLastTwoCharactersTheSame_BasicNegativeScenario(){
+        assertFalse(helper.areFirstAndLastTwoCharactersTheSame("ABCD"));
+    }
 
     @Test
-    public void areFirstAndLastTwoCharactersTheSame(){
-
+    public void testAreFirstAndLastTwoCharactersTheSame_BasicPositiveScenario(){
+        assertEquals(true,helper.areFirstAndLastTwoCharactersTheSame("AB"));
     }
 }
