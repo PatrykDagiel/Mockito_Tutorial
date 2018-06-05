@@ -1,20 +1,20 @@
 package helper;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.*;
 
 public class QuickBeforeAfterTest {
 
-    StringHelper helper;
+    StringHelper helper = new StringHelper();
 
-    @BeforeEach
+    @BeforeClass
+    public static void beforeClass() {
+        System.out.println("Before Class");
+    }
+
+    @Before
     public void setup() {
-        helper = new StringHelper();
+        System.out.println("Before Test");
+
     }
 
     @Test
@@ -27,10 +27,13 @@ public class QuickBeforeAfterTest {
         System.out.println("Test2 executed");
     }
 
-    @AfterEach
+    @AfterClass
+    public static void afterClass() {
+        System.out.println("After Class");
+    }
+
+    @After
     public void teardown() {
         System.out.println("finishing tests. Clear everything.");
     }
-
-
 }
