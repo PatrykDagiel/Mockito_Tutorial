@@ -2,7 +2,7 @@ package helper;
 
 public class StringHelper {
 
-    //AACD => CD ACD => CDEF => CDEF
+    //AACD => CD ACD -> CD CDEF => CDEF
     public String truncateAInFirst2Positions(String str) {
         if (str.length() <= 2)
             return str.replaceAll("A", "");
