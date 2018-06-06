@@ -24,7 +24,7 @@ public class ArraysCompareTest {
         Arrays.sort(numbers);
     }
 
-    @Test(timeout = 29)
+    @Test(timeout = 79)
     public void testSort_Performance(){
         int[] array = {12,23,4};
         for(int i=1;i<=1000000;i++)
